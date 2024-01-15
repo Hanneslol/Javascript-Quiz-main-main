@@ -13,11 +13,11 @@ const maximalQuestions = 4;
 
 let questions = [
   {
-    question: "What is the capital of Sweden ?",
-    choice1: "Oslo",
-    choice2: "Stockholm",
-    choice3: "Gothenburg",
-    choice4: "Malmoe",
+    question: "Hur många bultar finns det i ölandsbron?",
+    choice1: "6523987",
+    choice2: "7428954",
+    choice3: "7387674",
+    choice4: "6783498",
     answer: 2,
   },
 
@@ -64,9 +64,8 @@ const getNewQuestion = function () {
 
   questionCounter++;
   progresstext.innerText = `Question ${questionCounter} / ${maximalQuestions}`;
-  progressBarFull.style.width = `${
-    (questionCounter / maximalQuestions) * 100
-  }%`;
+  progressBarFull.style.width = `${(questionCounter / maximalQuestions) * 100
+    }%`;
 
   const questionsIndex = Math.floor(Math.random() * gameQuestions.length);
   currentQuestion = gameQuestions[questionsIndex];
